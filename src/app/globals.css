@@ -1,27 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer base {
+  * {
+    @apply box-border p-0 m-0;
   }
 }
+@layer utilities {
+ /* FONTS */
+ .regular-64 {
+  @apply text-[64px] font-[400] leading-[120%];
+}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.regular-40 {
+  @apply text-[40px] font-[400] leading-[120%];
+}
+
+.regular-32 {
+  @apply text-[32px] font-[400];
+}
+
+.regular-30 {
+  @apply text-[30px] font-[400];
+}
+
+.regular-24 {
+  @apply text-[24px] font-[400];
+}
+
+.regular-20 {
+  @apply text-[20px] font-[400];
+}
+
+.regular-exp-20 {
+  @apply text-[20px] font-[500];
+}
+
+.regular-18 {
+  @apply text-[18px] font-[400];
+}
+
+.regular-16 {
+  @apply text-[16px] font-[400];
+}
+
+.regular-15 {
+  @apply text-[15px] font-[600];
+}
+
+.regular-14 {
+  @apply text-[14px] font-[400];
+}
+
+.regular-12 {
+  @apply text-[12px] font-[400];
+}
+
+.regular-10 {
+  @apply text-[10px] font-[400];
+}
+
+.regular-9 {
+  @apply text-[9px] font-[400];
+}
+
+.medium-14 {
+  @apply text-[14px] font-[600];
+}
+
+.medium-12 {
+  @apply text-[12px] font-[400];
+}
+
+.bold-88 {
+  @apply text-[88px] font-[700] leading-[120%];
+}
+
+.bold-70 {
+  @apply text-[70px] font-[600] leading-[120%];
+}
+
+.bold-65 {
+  @apply text-[65px] font-[400] leading-[120%];
+}
+
+.bold-60 {
+  @apply text-[55px] font-[700] leading-[120%] font-poppins;
+}
+
+.bold-52 {
+  @apply text-[52px] font-[650] leading-[120%];
+}
+
+.bold-45 {
+  @apply text-[45px] font-[700] leading-[120%];
+}
+
+.bold-40 {
+  @apply text-[40px] font-[700] leading-[120%];
+}
+
+.bold-32 {
+  @apply text-[32px] font-[700] leading-[120%];
+}
+
+.bold-30 {
+  @apply text-[30px] font-[750] leading-[120%];
+}
+
+.bold-25 {
+  @apply text-[25px] font-[700] leading-[120%];
+}
+
+.bold-20 {
+  @apply text-[20px] font-[650];
+}
+
+.bold-19 {
+  @apply text-[19px] font-[600];
+}
+
+.bold-18 {
+  @apply text-[18px] font-[700];
+}
+
+.bold-16 {
+  @apply text-[16px] font-[700];
+}
+
+  .max-container {
+    @apply mx-auto max-w-[1440px];
+  }
+  
+  .padding-container-nav {
+    @apply px-5 lg:px-12 ;
+  }
+  
+  .padding-container {
+    @apply px-6 lg:px-20 ;
+  }
+
+  .flexCenter {
+    @apply flex items-center justify-center;
+  }
+
+  .flexBetween {
+    @apply flex items-center justify-between;
+  }
+  
+  .flexStart {
+    @apply flex items-center justify-start;
+  }
+
+  .flexEnd {
+    @apply flex items-center justify-end;
+  }
+
+   /* Hero */
+   .hero-map {
+    @apply absolute right-0 top-0 h-[700px] w-full bg-bg-img-1 bg-cover ;
+  }
+  
+  .story-map {
+    @apply absolute right-0 top-0 h-[845px] w-full bg-bg-img-2 bg-cover ;
+  }
+
+  .vertical-line::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    border-left: 3px solid #4D582F;
+  }
+
+  .hover-effect:hover {
+    @apply opacity-60;
+  }
+
+  .image-container:hover .title-overlay {
+    opacity: 1;
+  }
 }
