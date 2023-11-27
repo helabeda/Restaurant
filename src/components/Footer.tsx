@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="border-2 border-red-500 grid grid-cols-2 md:grid-cols-4 gap-4 bg-black pt-10 mt-44">
+    <footer className=" grid grid-cols-2 md:grid-cols-4 gap-4 bg-black pt-10 mt-44">
       <div className="lg:pl-20  pl-16">
         <Image src="/LOGO FOOTER.png" alt="logo" width={180} height={100} />
       </div>
